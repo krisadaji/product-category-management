@@ -1,0 +1,16 @@
+spring.application.name: ecommerce
+
+spring:
+  profiles: default
+  datasource: 
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+    initialize: true
+    continue-on-error: false
+    schema:
+    - classpath:data/product-management-schema.sql
+    data:
+    - classpath:data/cat-data.sql
+    - classpath:data/product-data.sql
